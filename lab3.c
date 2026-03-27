@@ -3,9 +3,10 @@
 #include <ctype.h>
 
 int main() {
-	char str[80];
+	char str[81];
 	scanf("%s", str);
-	for (int i = 0; str[i] != '\0'; i++) {
+	int len = strlen(str);
+	for (int i = 0; i < len; ++i) {
 		str[i] = toupper(str[i]);
 	}
 	printf("%s", str);
