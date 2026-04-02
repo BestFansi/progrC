@@ -3,11 +3,10 @@
 
 int main(int argc, char *argv[]) {
 	//1
-	int M=3;
-	double matrix[M][M]; 
-	double m,n;
-	int i,j,k; 
-	/*for (i = 0; i < 3; i++) { 
+	double matrix[3][3]; 
+	double m = 0.0, n = 0.0;
+	int i, j, k; 
+	for (i = 0; i < 3; i++) { 
     	for (j = 0; j < 3; j++) {
     		scanf("%lf", &matrix[i][j]);
     	}
