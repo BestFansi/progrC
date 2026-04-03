@@ -5,7 +5,7 @@
 *.ilk
 
 # Visual Studio 缓存和工程配置文件
-.vs/
+.vscode/
 x64/
 *.slnx
 *.vcxproj
