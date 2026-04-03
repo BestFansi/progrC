@@ -10,3 +10,5 @@ x64/
 *.slnx
 *.vcxproj
 *.vcxproj.*
+
+*.md
