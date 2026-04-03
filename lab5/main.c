@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "op.h"
-
 int main()
 {
     //Dynamically allocate a two-dimensional array
@@ -20,7 +19,6 @@ int main()
             scanf("%lf", &mat1[i][j]);
         }
     }
-
     printf("matrix2 = ");
     for(int i = 0; i < n; i++)
     {
