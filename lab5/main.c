@@ -12,21 +12,9 @@ int main()
 
     //assign
     printf("matrix1 = ");
-    for(int i = 0; i < n; i++)
-    {
-        for(int j = 0; j < n; j++)
-        {
-            scanf("%lf", &mat1[i][j]);
-        }
-    }
+    mat1 = inp(mat1, n);
     printf("matrix2 = ");
-    for(int i = 0; i < n; i++)
-    {
-        for(int j = 0; j < n; j++)
-        {
-            scanf("%lf", &mat2[i][j]);
-        }
-    }
+    mat2 = inp(mat2, n);
 
     //operation
     char op;
@@ -35,15 +23,7 @@ int main()
     double** result = calculate(mat1, mat2, n, op);
 
     //output
-    printf("result: \n");
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            printf("%.2lf ", result[i][j]);
-        }
-        printf("\n");
-    }
+    outp(result, n);
 
     //clear
     FreeArr(result, n);

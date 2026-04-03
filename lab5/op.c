@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "op.h"
  /*
@@ -27,7 +28,6 @@ double** AllArr(int n) //返回的是那个“目录”的首地址，而“目�
     }
     return arr;
 }
-
 
 double** calculate(double** arr1, double** arr2, int n, char op)
 {
@@ -65,7 +65,6 @@ double** calculate(double** arr1, double** arr2, int n, char op)
     return result;
 }
 
-
 void FreeArr(double** arr, int n)
 {
     for (int i = 0; i < n; i++)
@@ -76,3 +75,28 @@ void FreeArr(double** arr, int n)
         free(arr);
         arr = NULL;
 }
+
+double** inp(double** arr, int n)
+{
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            scanf("%lf", &arr[i][j]);
+        }
+    }
+    return arr;
+}
+
+double** outp(double** arr, int n){
+    printf("result: \n");
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            printf("%.2lf ", arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+
