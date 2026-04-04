@@ -10,7 +10,7 @@ element at index i --
 double** AllArr(int n) //返回的是那个“目录”的首地址，而“目录”里装的都是指针
 {
     //二级指针动态申请二维数组
-    double** arr = (double**)malloc(sizeof(double*) * n); //只开辟了n个存放双精度浮点的空间
+    double** arr = (double**)malloc(sizeof(double*) * n);
     //在内存里建了一个包含n个格子的一维数组。这个数组里现在不能存具体的数据，它只能用来存地址（指针）。这就是我们的“目录”。arr 指向这个目录的第一个格子。
     if (arr == NULL)
     {
