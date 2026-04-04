@@ -22,11 +22,7 @@ int main(int argc, char *argv[]) {
 	int N=2;
 	int A[N][N];
 	int B[N][N];
-	for (i = 0; i < 2; i++) { 
-    	for (j = 0; j < 2; j++) {
-    		B[i][j]=0;
-    	}
-	}
+
 	for (i = 0; i < 2; i++) { 
     	for (j = 0; j < 2; j++) {
     		scanf("%d", &A[i][j]);
@@ -35,6 +31,7 @@ int main(int argc, char *argv[]) {
 
     for (i = 0; i < 2; i++) {
         for (j = 0; j < 2; j++) {
+			B[i][j]=0;
             for (k = 0; k < 2; k++) {
             	B[i][j] += A[i][k] * A[k][j];
 			}
