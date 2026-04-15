@@ -11,22 +11,12 @@ typedef struct {
         char lastname[50];
         int birthyear;
     } humen;
-int FindSmallest(humen arr[]) {
-    int smallest = 3000;
-    int small_index = 0;
-    for (int i=0; i<4; i++) {
-        if (arr[i].birthyear < smallest && arr[i].birthyear != 0) {
-            smallest = arr[i].birthyear;
-            small_index = i;
-        }     
-    }
-    return small_index;
-}
-int bubble_sort(humen arr[]){
+
+void bubble_sort(humen arr[]){
     humen temp;
     for (int i = 0; i < 4; i++) {
         bool swapped = false;
-        for (int j = 0; j < 4 - i; j++) {
+        for (int j = 0; j < 3 - i; j++) {
             if (arr[j].birthyear > arr[j + 1].birthyear) {
                 temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -39,21 +29,22 @@ int bubble_sort(humen arr[]){
 }
 int main() {  
     humen arr1[4], arr2[4];
-    for(int i=0; i<4; i++) {
-        printf("Please enter the information for the person-%d(firstname, lastname, birth year)\n", i+1);
-        scanf("%s %s %d", arr1[i].firstname, arr1[i].lastname, &arr1[i].birthyear);
+    //read file
+    FILE *file = fopen("input.txt", "r");
+    if (file == NULL) {
+        return 1;
     }
-    /*
-    for (int i=0; i<4; i++) {
-        int small_index = FindSmallest(arr1);
-        arr2[i] = arr1[small_index];
-        arr1[small_index].birthyear = 0;
+    for (int i = 0; i < 4; i++) {
+        fscanf(file, "%s %s %d", arr1[i].firstname, arr1[i].lastname, &arr1[i].birthyear);
     }
-    */
+    fclose(file);
+
+    //sort
     for (int i = 0; i < 4; i++) {
         arr2[i] = arr1[i];
     }
     bubble_sort(arr2);
+    //output
     for (int i=0; i<4; i++) {
         printf("%s %s %d\n", arr2[i].firstname, arr2[i].lastname, arr2[i].birthyear);
     }
