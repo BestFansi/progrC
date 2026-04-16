@@ -11,7 +11,7 @@
 //#define M 3
 int main(int argc, char *argv[]) {
 	//1
-	int M = 4, i, j, k;
+	int M = 3, i, j, k;
 	double m1[M][M]; 
 	double MainDiag = 0.0, SecDiag = 0.0;
 	printf("Enter the value of matrix_1\n");
