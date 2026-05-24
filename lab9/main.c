@@ -8,6 +8,6 @@
 #include <stdio.h>
 int main() {
     scanf("");
-    
+    oke
     return 0;
 }
