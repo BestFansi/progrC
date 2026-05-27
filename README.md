@@ -1,5 +1,3 @@
-This is a repository for storing my C programming course assiments.
-
 # Задачи по курсу программирования на C
 
 ## ЗАДАНИЕ 1
